@@ -1,5 +1,0 @@
-Ensure you have ImageMagick installed
-
-Replace all images in this folder with images of the same size
-
-Run "convert ./16.png ./32.png ./48.png ./64.png ./128.png ./256.png favicon.ico" in the terminal while in this folder
