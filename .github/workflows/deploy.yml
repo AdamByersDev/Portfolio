@@ -1,0 +1,60 @@
+name: Deploy to Home Server
+
+on:
+  push:
+    branches:
+      - main
+      - feature/plans-page
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up SSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        ssh-keyscan -p 2222 abyers.ca >> ~/.ssh/known_hosts
+
+    - name: Deploy to prod
+      if: github.ref == 'refs/heads/main'
+      run: |
+        ssh -p 2222 abyers@abyers.ca << 'EOF'
+          set -e 
+
+          export NVM_DIR="/home/abyers/.nvm"
+          source "$NVM_DIR/nvm.sh"
+          nvm use 22
+
+          cd ~/websites/portfolio/main
+          git pull origin main
+          npm install && npm prune
+          npm run build
+          pm2 restart lbse-prod || pm2 start npm --name "lbse-prod" -- start -- --port=2237
+        EOF
+    
+    - name: Deploy to dev
+      env:
+        DEV_BRANCH: ${{ secrets.DEV_BRANCH }}
+      if: github.ref_name == env.DEV_BRANCH
+      run: |
+        ssh -p 2222 abyers@abyers.ca "export DEV_BRANCH=${DEV_BRANCH} && bash -s" << "EOF"
+          set -e
+
+          export NVM_DIR="/home/abyers/.nvm"
+          source "$NVM_DIR/nvm.sh"
+          nvm use 22
+
+          cd ~/websites/portfolio/dev
+          git fetch origin --prune
+          git checkout -B $DEV_BRANCH origin/$DEV_BRANCH
+          git pull origin $DEV_BRANCH
+          npm install && npm prune
+          npm run build
+          pm2 restart portfolio-dev || pm2 start npm --name "portfolio-dev" -- start -- --port=2233
+        EOF
