@@ -6,7 +6,7 @@ import NavButton from '@/components/inputs/NavButton';
 
 export default function About() {
   return (
-    <Box component="section" id='about-me'>
+    <Box component="section" id="about-me">
       <Box
         sx={{
           display: 'flex',
@@ -16,7 +16,7 @@ export default function About() {
         <Box
           component="span"
           sx={{
-            width: '50px',
+            width: { xs: '50px', sm: '75px', md: '100px', lg: '125px' },
             backgroundColor: 'primary.main',
             flexShrink: '0',
           }}
@@ -28,7 +28,7 @@ export default function About() {
           }}
         >
           <Typography component="h2" variant="h5">
-            ABOUT ME
+            About Me
           </Typography>
           <Divider
             sx={{
@@ -43,12 +43,12 @@ export default function About() {
             Next.js, and Node.js. Since 2018, I have built full-scale web
             applications, starting with PHP and SQL as a self-taught developer
             before advancing through formal education. Passionate about
-            developing accessible, high-performance, and scalable web
-            solutions, with a focus on integrating APIs, cloud services, and
-            CI/CD pipelines. Committed to clean code, agile methodologies, and
-            continuous learning—currently deepening expertise in cloud
-            platforms like AWS and GCP, as well as GraphQL, to further enhance
-            full-stack proficiency and deliver seamless digital experiences.
+            developing accessible, high-performance, and scalable web solutions,
+            with a focus on integrating APIs, cloud services, and CI/CD
+            pipelines. Committed to clean code, agile methodologies, and
+            continuous learning—currently deepening expertise in cloud platforms
+            like AWS and GCP, as well as GraphQL, to further enhance full-stack
+            proficiency and deliver seamless digital experiences.
           </Typography>
         </Box>
       </Box>

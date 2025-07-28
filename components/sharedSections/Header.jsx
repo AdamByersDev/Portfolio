@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 
-export default function() {
+export default function () {
   return (
     <Box
       component="header"
@@ -16,7 +16,7 @@ export default function() {
         <Box
           component="span"
           sx={{
-            width: '50px',
+            width: { xs: '50px', sm: '75px', md: '100px', lg: '125px' },
             backgroundColor: 'primary.main',
             flexShrink: '0',
           }}
@@ -27,15 +27,17 @@ export default function() {
           }}
         >
           <Typography component="h1" variant="h4">
-            ADAM BYERS
+            Adam Byers
           </Typography>
           <Typography
             component="p"
-            variant="body1"
             fontSize={{ xs: 18, sm: 27 }}
             color="grey.800"
+            sx={{
+              textTransform: 'uppercase',
+            }}
           >
-            FULL STACK WEB DEVELOPER
+            Full Stack Web Developer
           </Typography>
         </Box>
       </Box>

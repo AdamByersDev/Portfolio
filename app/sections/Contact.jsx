@@ -12,17 +12,13 @@ export default function Contact() {
         backgroundColor: 'grey.900',
         display: 'flex',
         flexDirection: { xs: 'column', sm: 'row' },
-        position: { sm: 'sticky'},
+        position: { sm: 'sticky' },
         top: { sm: '100px' },
         zIndex: 99,
-        justifyContent: {sm: 'space-around'}
+        justifyContent: { sm: 'space-around' },
       }}
     >
-      <NavButton
-        icon={LocalPhoneIcon}
-        label="Call Me"
-        href="tel:5194940939"
-      />
+      <NavButton icon={LocalPhoneIcon} label="Call Me" href="tel:5194940939" />
       <NavButton
         icon={GitHubIcon}
         label="GitHub"
@@ -34,5 +30,5 @@ export default function Contact() {
         href="mailto:adam@abyers.ca"
       />
     </Box>
-  )
+  );
 }
