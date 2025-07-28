@@ -30,7 +30,7 @@ jobs:
       continue-on-error: false
 
   deploy:
-    if: github.ref_name == 'main' || github.ref_name == secrets.DEV_BRANCH
+    if: ${{ github.ref_name == 'main' || github.ref_name == secrets.DEV_BRANCH }}
     needs: lint-and-format
     runs-on: ubuntu-latest
 
