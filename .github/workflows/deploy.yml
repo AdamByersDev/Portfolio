@@ -3,11 +3,35 @@ name: Deploy to Home Server
 on:
   push:
     branches:
-      - main
-      - feature/plans-page
+      - '**'
 
 jobs:
+  lint-and-format:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run ESLint
+      run: npm run lint
+      continue-on-error: false
+    
+    - name: Run Prettier check
+      run: npm run format:check
+      continue-on-error: false
+
   deploy:
+    if: github.ref_name == 'main' || github.ref_name == secrets.DEV_BRANCH
+    needs: lint-and-format
     runs-on: ubuntu-latest
 
     steps:
