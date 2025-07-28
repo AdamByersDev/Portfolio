@@ -1,4 +1,4 @@
-name: Deploy to Home Server
+name: Lint, Format, and Deploy
 
 on:
   push:
