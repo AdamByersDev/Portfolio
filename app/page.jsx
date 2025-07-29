@@ -4,7 +4,7 @@ import Header from '@/components/sharedSections/Header';
 import Contact from './sections/Contact';
 import SkillsHistory from './sections/SkillsHistory';
 
-export default function Home() {
+export default function Page() {
   return (
     <Box
       sx={{
