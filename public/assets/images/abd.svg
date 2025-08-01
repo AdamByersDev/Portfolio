@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="191.44922"
+   height="200"
+   viewBox="0 0 191.44922 200"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="abd.svg"
+   inkscape:export-filename="bitmap.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview922"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.0275412"
+     inkscape:cx="46.226858"
+     inkscape:cy="140.14037"
+     inkscape:window-width="952"
+     inkscape:window-height="1051"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showguides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1045" />
+  </sodipodi:namedview>
+  <defs
+     id="defs917" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-3175.4087,-2085)">
+    <g
+       id="g4278"
+       inkscape:label="Right"
+       transform="translate(3455.4395,2577.8795)"
+       inkscape:export-filename="./abd.svg"
+       inkscape:export-xdpi="518.40002"
+       inkscape:export-ydpi="518.40002">
+      <path
+         id="rect1823-6-5-4"
+         style="display:inline;fill:#b78bf4;fill-opacity:1;stroke-width:25;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m -126.57228,-492.87952 -115.46876,199.99998 h 28.8672 l 115.470695,-200 z"
+         inkscape:label="Slash 2"
+         inkscape:export-filename="abd.png"
+         inkscape:export-xdpi="518.40002"
+         inkscape:export-ydpi="518.40002" />
+      <path
+         id="rect1996-9-92"
+         style="display:inline;fill:#5311ae;fill-opacity:1;stroke-width:25;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         inkscape:label="Greater Than"
+         d="m -168.12852,-445.89907 -12.54882,21.73242 67.0957,31.28711 -57.27539,26.70703 -21.79297,37.74805 104.068359,-48.52735 v -31.85546 z" />
+    </g>
+    <path
+       id="rect1823-7"
+       style="display:inline;fill:#5311ae;fill-opacity:1;stroke-width:25;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       d="m 3300,2085 -115.4707,200 h 28.8691 l 115.4688,-200 z"
+       inkscape:label="Slash 1" />
+    <path
+       id="rect1996-9-9-2"
+       style="display:inline;fill:#b78bf4;fill-opacity:1;stroke-width:25;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       inkscape:label="Less Than"
+       d="m 3279.477,2120.5449 -104.0684,48.5274 v 31.8554 l 79.5469,37.0938 12.5488,-21.7344 -67.0957,-31.2871 57.2754,-26.707 z" />
+  </g>
+</svg>

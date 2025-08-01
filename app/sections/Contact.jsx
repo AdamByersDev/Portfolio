@@ -1,5 +1,6 @@
 import { Box } from '@mui/material';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import NavButton from '@/components/inputs/NavButton';
@@ -23,6 +24,12 @@ export default function Contact() {
         icon={GitHubIcon}
         label="GitHub"
         href="https://github.com/AdamByersDev"
+      />
+      <NavButton
+        icon={DashboardIcon}
+        label="Demo Dashboard"
+        href="/demo"
+        component="a"
       />
       <NavButton
         icon={AlternateEmailIcon}

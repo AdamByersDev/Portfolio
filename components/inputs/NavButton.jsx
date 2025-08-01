@@ -1,11 +1,17 @@
 import { Button, Typography } from '@mui/material';
 import Link from 'next/link';
 
-export default function NavButton({ icon, label = '', href = '', ...props }) {
+export default function NavButton({
+  component,
+  icon,
+  label = '',
+  href = '',
+  ...props
+}) {
   const Icon = icon || false;
   return (
     <Button
-      component={Link}
+      component={component || Link}
       href={href}
       sx={{
         color: 'primary.light',
