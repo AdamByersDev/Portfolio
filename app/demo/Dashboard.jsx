@@ -52,11 +52,11 @@ export default function Dashboard({ children, theme }) {
             variant="h6"
             component="p"
             sx={{
-              height: loading? '32px' : "0",
+              height: loading ? '32px' : '0',
               opacity: loading ? 1 : 0,
               transition: 'height 0.2s linear, opacity 0.2s ease-in-out',
               color: '#ffffff',
-              overflow: 'hidden'
+              overflow: 'hidden',
             }}
           >
             Loading...
@@ -65,11 +65,11 @@ export default function Dashboard({ children, theme }) {
             variant="h6"
             component="p"
             sx={{
-              height: !loading? '32px' : '0',
+              height: !loading ? '32px' : '0',
               opacity: !loading ? 1 : 0,
               transition: 'height 0.2s linear, opacity 0.2s ease-in-out',
               color: '#ffffff',
-              overflow: 'hidden'
+              overflow: 'hidden',
             }}
           >
             Welcome!
