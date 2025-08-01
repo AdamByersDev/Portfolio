@@ -17,7 +17,7 @@ export default function Dashboard({ children, theme }) {
       setLoading(false);
       setTimeout(() => {
         setOverlay(false);
-      }, 500);
+      }, 1000);
     }, 500);
   }, []);
 
@@ -37,7 +37,6 @@ export default function Dashboard({ children, theme }) {
             transition: 'opacity 0.45s ease-in-out 0.25s',
             flexDirection: 'column',
             cursor: loading && 'none',
-            paddingBottom: '20vh',
           }}
         >
           <Box
@@ -53,10 +52,27 @@ export default function Dashboard({ children, theme }) {
             variant="h6"
             component="p"
             sx={{
+              height: loading? '32px' : "0",
+              opacity: loading ? 1 : 0,
+              transition: 'height 0.2s linear, opacity 0.2s ease-in-out',
               color: '#ffffff',
+              overflow: 'hidden'
             }}
           >
-            {loading ? 'Loading' : 'Welcome!'}
+            Loading...
+          </Typography>
+          <Typography
+            variant="h6"
+            component="p"
+            sx={{
+              height: !loading? '32px' : '0',
+              opacity: !loading ? 1 : 0,
+              transition: 'height 0.2s linear, opacity 0.2s ease-in-out',
+              color: '#ffffff',
+              overflow: 'hidden'
+            }}
+          >
+            Welcome!
           </Typography>
         </Box>
       )}
