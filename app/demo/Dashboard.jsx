@@ -6,6 +6,7 @@ import { DashboardLayout } from '@toolpad/core';
 import { NextAppProvider } from '@toolpad/core/nextjs';
 import { useEffect, useState } from 'react';
 import HomeFilledIcon from '@mui/icons-material/HomeFilled';
+import ArticleIcon from '@mui/icons-material/Article';
 
 export default function Dashboard({ children, theme }) {
   const [loading, setLoading] = useState(true);
@@ -72,7 +73,7 @@ export default function Dashboard({ children, theme }) {
           <DashboardLayout>
             <Box
               sx={{
-                padding: 1
+                padding: 1,
               }}
             >
               {children}
@@ -89,5 +90,13 @@ const navigation = [
     segment: 'demo',
     title: 'Home',
     icon: <HomeFilledIcon />,
-  }
+  },
+  {
+    kind: 'divider',
+  },
+  {
+    segment: '',
+    title: 'Resume',
+    icon: <ArticleIcon />,
+  },
 ];
